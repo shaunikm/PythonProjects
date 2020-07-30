@@ -63,5 +63,5 @@ if round(100 - score_set * mistake_count) >= 0:
     acc = 'Accuracy: ' + str(round(100 - score_set * mistake_count, 2)) + '%'
 else:
     acc = 'Accuracy: 0.0%'
-print(timel) #random comment
+print(timel)
 print(acc)
