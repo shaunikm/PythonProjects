@@ -31,25 +31,24 @@ while not done:
             if event.key == K_ESCAPE:
                 done = True
 
-        if event.type != KEYDOWN:
-            # background in white
-            screen.fill(white)
+    # background in white
+    screen.fill(white)
 
-            # Copy image to screen:
-            screen.blit(pic, (0, 0))
+    # Copy image to screen:
+    screen.blit(pic, (0, 0))
 
-            # Update the screen with what we've drawn.
-            pygame.display.flip()
-            pygame.display.update()
+    # Update the screen with what we've drawn.
+    pygame.display.flip()
+    pygame.display.update()
 
-            pygame.time.delay(10)  # stop the program for 1/100 second
+    pygame.time.delay(10)  # stop the program for 1/100 second
 
-            # decreases size by 1 pixel in x and y axis
-            pic_position_and_size = pic_position_and_size.inflate(-1, -1)
+    # decreases size by 1 pixel in x and y axis
+    pic_position_and_size = pic_position_and_size.inflate(-1, -1)
 
-            # scales the image
-            pic = pygame.transform.smoothscale(org_pic, pic_position_and_size.size)
-    clock.tick(60)
+    # scales the image
+    pic = pygame.transform.smoothscale(org_pic, pic_position_and_size.size)
+
 
 # Close the window and quit.
 pygame.quit()
