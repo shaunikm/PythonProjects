@@ -9,4 +9,4 @@ def GCF(x,y):
     return g #return the GCF
 
 #main/test code
-print(str(GCF(270, 195git )))
+print(str(GCF(270, 195)))
