@@ -15,18 +15,19 @@ class dict_control:
         self.b = False
         self.d = {}
 
-    def access(self, *num):
-            if not self.b:
-                return '\u001b[31mAccess Denied\u001b[0m'
-            else:
-                self.d = self.j
-                return self.d
+    def access(self):
+        if not self.b:
+            return '\u001b[31mAccess Denied\u001b[0m'
+        else:
+            self.d = self.j
+            return self.d
+
 
     def stat(self):
        if not self.b:
-           return '\u001b[31mLOCKED\u001b[0m'
+           return 'LOCKED'
        else:
-           return '\u001b[32mUNLOCKED\u001b[0m'
+           return 'UNLOCKED'
 
 #main/test code
 if __name__ == '__main__':
@@ -42,3 +43,7 @@ if __name__ == '__main__':
     dictionary.unlock()
     print(dictionary.access())
     print(dictionary.stat())
+    if dictionary.stat() == 'LOCKED':
+        print('False')
+    else:
+        print('True')
