@@ -61,7 +61,7 @@ while m is True:
     if z is True:
         hint1 = 'The number is a prime number.'
     elif tu is True:
-        hint1 = 'The numbers is a composite number.'
+        hint1 = 'The number is a composite number.'
     else:
         hint1 = 'A few factors of your number are ' + str(list_to_str(random_factor)) + '.'
     if b % 2:
